@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nicole-loescher/static/css/main.073c9b0a.css",
+    "main.js": "/nicole-loescher/static/js/main.15c5885e.js",
+    "static/js/787.7efd31bd.chunk.js": "/nicole-loescher/static/js/787.7efd31bd.chunk.js",
+    "index.html": "/nicole-loescher/index.html",
+    "main.073c9b0a.css.map": "/nicole-loescher/static/css/main.073c9b0a.css.map",
+    "main.15c5885e.js.map": "/nicole-loescher/static/js/main.15c5885e.js.map",
+    "787.7efd31bd.chunk.js.map": "/nicole-loescher/static/js/787.7efd31bd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.15c5885e.js"
+  ]
+}
