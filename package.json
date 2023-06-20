@@ -1,5 +1,5 @@
 {
-  "homepage": "http://nicole-loescher.github.io/memlock.github.io",
+  "homepage": "http://nicole-loescher.github.io/memlock",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
