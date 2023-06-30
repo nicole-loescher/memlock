@@ -1,12 +1,19 @@
 import "./App.css";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import LandingPage from "./components/landingPage";
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-    </Routes>
-    // <div>hello memlock</div>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Routes>
+        <Route exact path="/" element={<LandingPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
