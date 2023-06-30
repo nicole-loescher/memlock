@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/memlock.github.io/static/css/main.073c9b0a.css",
-    "main.js": "/memlock.github.io/static/js/main.cbf70171.js",
-    "static/js/787.7efd31bd.chunk.js": "/memlock.github.io/static/js/787.7efd31bd.chunk.js",
-    "index.html": "/memlock.github.io/index.html",
-    "main.073c9b0a.css.map": "/memlock.github.io/static/css/main.073c9b0a.css.map",
-    "main.cbf70171.js.map": "/memlock.github.io/static/js/main.cbf70171.js.map",
-    "787.7efd31bd.chunk.js.map": "/memlock.github.io/static/js/787.7efd31bd.chunk.js.map"
+    "main.css": "/memlock/static/css/main.073c9b0a.css",
+    "main.js": "/memlock/static/js/main.37caa161.js",
+    "static/js/787.7efd31bd.chunk.js": "/memlock/static/js/787.7efd31bd.chunk.js",
+    "index.html": "/memlock/index.html",
+    "main.073c9b0a.css.map": "/memlock/static/css/main.073c9b0a.css.map",
+    "main.37caa161.js.map": "/memlock/static/js/main.37caa161.js.map",
+    "787.7efd31bd.chunk.js.map": "/memlock/static/js/787.7efd31bd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.cbf70171.js"
+    "static/js/main.37caa161.js"
   ]
 }
