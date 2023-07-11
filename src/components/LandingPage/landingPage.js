@@ -8,7 +8,7 @@ import {
   darkGreySwoopStyle,
   lightGreySwoopStyle,
 } from "./landingPage.css";
-import Logo from "../assets/logo.svg";
+import Logo from "../../assets/logo.svg";
 import Button from "../Button/button";
 
 const LandingPage = () => {
