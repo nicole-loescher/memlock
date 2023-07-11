@@ -6,7 +6,7 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-import LandingPage from "./components/landingPage";
+import LandingPage from "./components/LandingPage/landingPage";
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>

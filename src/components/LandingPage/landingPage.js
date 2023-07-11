@@ -9,6 +9,7 @@ import {
   lightGreySwoopStyle,
 } from "./landingPage.css";
 import Logo from "../assets/logo.svg";
+import Button from "../Button/button";
 
 const LandingPage = () => {
   return (
@@ -18,7 +19,7 @@ const LandingPage = () => {
       <div css={backgroundStyle} />
       <div css={bodyStyle}>
         <img src={Logo} alt="ellieLogo" />
-        <button>Get Started button placeholder</button>
+        <Button type="primary" copy="Let`s Go" />
       </div>
     </>
   );
