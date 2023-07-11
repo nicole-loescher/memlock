@@ -50,7 +50,7 @@ const SignUpPage = () => {
   return (
     <div css={backgroundStyle}>
       <div css={""}>
-        <img src={Logo} alt="ellieLogo" />
+        {/* <img src={Logo} alt="ellieLogo" /> */}
         <form onSubmit={handleSubmit(submitPage)}>
           <TextInput
             label="email"
