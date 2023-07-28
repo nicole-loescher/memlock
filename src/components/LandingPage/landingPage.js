@@ -19,7 +19,11 @@ const LandingPage = () => {
       <div css={backgroundStyle} />
       <div css={bodyStyle}>
         <img src={Logo} alt="ellieLogo" />
-        <Button type="primary" copy="Let`s Go" />
+        <Button
+          styleType="primary"
+          copy="Let`s Go"
+          onCLick={(e) => (window.location.href = "/signup")}
+        />
       </div>
     </>
   );
