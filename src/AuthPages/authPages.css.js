@@ -8,6 +8,7 @@ export const backgroundStyle = css`
 `;
 export const bodyStyle = css`
   display: flex;
+  width: 300px;
   flex-direction: column;
   align-items: center;
   .header-text {
@@ -23,8 +24,9 @@ export const disclaimer = css`
 export const formStyle = css`
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-self: normal;
   input {
+    width: 100%;
     padding: 4px;
     border-style: none none solid none;
     margin: 12px 0;

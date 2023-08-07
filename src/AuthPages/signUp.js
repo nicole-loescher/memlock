@@ -2,19 +2,19 @@
 /** @jsx jsx */
 import React, { useState } from "react";
 import { jsx } from "@emotion/react";
-import Button from "../Button/button";
+import Button from "../components/Button/button";
 import {
   backgroundStyle,
   bodyStyle,
   disclaimer,
   ellieStyle,
   formStyle,
-} from "./signUp.css";
+} from "./authPages.css";
 import { useForm } from "react-hook-form";
-import TextInput from "../Inputs/TextInput/textInput";
+import TextInput from "../components/Inputs/TextInput/textInput";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { EMAIL_REGEX, NAME_REGEX, PASSWORD_REGEX } from "../../utils/regex";
+import { EMAIL_REGEX, NAME_REGEX, PASSWORD_REGEX } from "../utils/regex";
 
 const schema = yup.object().shape({
   email: yup
@@ -63,7 +63,7 @@ const SignUpPage = () => {
         {/* <img src={Logo} alt="ellieLogo" /> */}
         <form css={formStyle} onSubmit={handleSubmit(submitPage)}>
           <TextInput
-            placeHolder="Email"
+            placeHolder="Email Address"
             id="email"
             name="email"
             ref={register}
@@ -85,6 +85,7 @@ const SignUpPage = () => {
             placeHolder="Password"
             name="password"
             id="password"
+            type="password"
             ref={register}
             defaultValue={password}
             onChange={(e) => setPassword(e?.target?.value)}
