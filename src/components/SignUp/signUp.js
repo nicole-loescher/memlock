@@ -42,7 +42,9 @@ const SignUpPage = () => {
   const submitPage = (data, e) => {
     e.preventDefault();
     //
+    console.log(errors, "-errors----");
   };
+
   const [email, setEmail] = useState("");
   const [memberName, setMemberName] = useState("");
   const [password, setPassword] = useState("");
@@ -53,24 +55,27 @@ const SignUpPage = () => {
         {/* <img src={Logo} alt="ellieLogo" /> */}
         <form onSubmit={handleSubmit(submitPage)}>
           <TextInput
-            label="email"
+            label="Email"
             name="email"
             ref={register}
-            value={email}
+            defaultValue={email}
             onChange={(e) => setEmail(e?.target?.value)}
           />
           <TextInput
-            label="memberName"
+            label="Name"
             name="memberName"
             ref={register}
-            value={memberName}
-            onChange={(e) => setMemberName(e?.target?.value)}
+            defaultValue={memberName}
+            onChange={(e) => {
+              console.log(e, e.target, e.target.value, "-----e");
+              return setMemberName(e?.target?.value);
+            }}
           />
           <TextInput
-            label="password"
+            label="Password"
             name="password"
             ref={register}
-            value={password}
+            defaultValue={password}
             onChange={(e) => setPassword(e?.target?.value)}
           />
           <Button copy="Sign Up" type="submit" styleType="primary" />

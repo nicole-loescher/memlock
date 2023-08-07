@@ -22,7 +22,7 @@ const LandingPage = () => {
         <Button
           styleType="primary"
           copy="Let`s Go"
-          onCLick={(e) => (window.location.href = "/signup")}
+          onClick={(e) => (window.location.href = "memlock/signup")}
         />
       </div>
     </>
