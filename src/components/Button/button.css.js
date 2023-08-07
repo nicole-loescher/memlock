@@ -1,6 +1,6 @@
 import { css, jsx } from "@emotion/react";
 
-export const buttonStyles = (type) => {
+export const buttonStyles = (type, width) => {
   if (type === "primary") {
     return css`
       color: white;
@@ -9,7 +9,7 @@ export const buttonStyles = (type) => {
       max-width: 410px;
       border-radius: 10px;
       font-weight: 600;
-      width: 80%;
+      width: ${width}%;
     `;
   }
 };

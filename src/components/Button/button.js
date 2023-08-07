@@ -5,9 +5,9 @@ import { buttonStyles } from "./button.css";
 import { jsx } from "@emotion/react";
 
 const Button = (props) => {
-  const { styleType, copy } = props;
+  const { styleType, copy, width } = props;
   return (
-    <button css={buttonStyles(styleType)} {...props}>
+    <button css={buttonStyles(styleType, width)} {...props}>
       {copy}
     </button>
   );
