@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/memlock/static/css/main.4792a309.css",
-    "main.js": "/memlock/static/js/main.5ccff39c.js",
+    "main.js": "/memlock/static/js/main.274f2825.js",
     "static/js/787.7efd31bd.chunk.js": "/memlock/static/js/787.7efd31bd.chunk.js",
     "static/media/logo.svg": "/memlock/static/media/logo.505179e53befaf7507b044199f6714b1.svg",
     "index.html": "/memlock/index.html",
     "main.4792a309.css.map": "/memlock/static/css/main.4792a309.css.map",
-    "main.5ccff39c.js.map": "/memlock/static/js/main.5ccff39c.js.map",
+    "main.274f2825.js.map": "/memlock/static/js/main.274f2825.js.map",
     "787.7efd31bd.chunk.js.map": "/memlock/static/js/787.7efd31bd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4792a309.css",
-    "static/js/main.5ccff39c.js"
+    "static/js/main.274f2825.js"
   ]
 }
