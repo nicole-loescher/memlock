@@ -2,13 +2,19 @@
 /** @jsx jsx */
 import React, { useState } from "react";
 import { jsx } from "@emotion/react";
-import Button from "../Button/button";
-import { backgroundStyle } from "./signUp.css";
+import Button from "../components/Button/button";
+import {
+  backgroundStyle,
+  bodyStyle,
+  disclaimer,
+  ellieStyle,
+  formStyle,
+} from "./authPages.css";
 import { useForm } from "react-hook-form";
-import TextInput from "../Inputs/TextInput/textInput";
+import TextInput from "../components/Inputs/TextInput/textInput";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { EMAIL_REGEX, NAME_REGEX, PASSWORD_REGEX } from "../../utils/regex";
+import { EMAIL_REGEX, NAME_REGEX, PASSWORD_REGEX } from "../utils/regex";
 
 const schema = yup.object().shape({
   email: yup
@@ -51,19 +57,23 @@ const SignUpPage = () => {
 
   return (
     <div css={backgroundStyle}>
-      <div css={""}>
+      <div css={bodyStyle}>
+        <div css={ellieStyle}>Ellie placeholder</div>
+        <div className="header-text">Sign Up</div>
         {/* <img src={Logo} alt="ellieLogo" /> */}
-        <form onSubmit={handleSubmit(submitPage)}>
+        <form css={formStyle} onSubmit={handleSubmit(submitPage)}>
           <TextInput
-            label="Email"
+            placeHolder="Email Address"
+            id="email"
             name="email"
             ref={register}
             defaultValue={email}
             onChange={(e) => setEmail(e?.target?.value)}
           />
           <TextInput
-            label="Name"
+            placeHolder="Name"
             name="memberName"
+            id="memberName"
             ref={register}
             defaultValue={memberName}
             onChange={(e) => {
@@ -72,13 +82,25 @@ const SignUpPage = () => {
             }}
           />
           <TextInput
-            label="Password"
+            placeHolder="Password"
             name="password"
+            id="password"
+            type="password"
             ref={register}
             defaultValue={password}
             onChange={(e) => setPassword(e?.target?.value)}
           />
-          <Button copy="Sign Up" type="submit" styleType="primary" />
+          <div css={disclaimer}>
+            {/* TODO: link to terms and conditions and policies (build pages) */}
+            By signing up, you are agree to our <a>Terms & Conditions</a> and{" "}
+            <a>Policies</a>
+          </div>
+          <Button
+            copy="Continue"
+            type="submit"
+            styleType="primary"
+            width={100}
+          />
         </form>
       </div>
     </div>

@@ -22,6 +22,7 @@ const LandingPage = () => {
         <Button
           styleType="primary"
           copy="Let`s Go"
+          width={80}
           onClick={(e) => (window.location.href = "memlock/signup")}
         />
       </div>
