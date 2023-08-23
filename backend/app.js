@@ -1,16 +1,16 @@
-import express from "express";
-import morgan from "morgan";
-import cors from "cors";
-import csurf from "csurf";
-import helmet from "helmet";
-import cookieParser from "cookie-parser";
-import bodyParser from "body-parser";
+const express = require("express");
+const morgan = require("morgan");
+const cors = require("cors");
+const csurf = require("csurf");
+const helmet = require("helmet");
+const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
 
-import { ValidationError } from "sequelize";
-// import routes from "./routes";
-import * as config from "./config/index.js";
+const { ValidationError } = require("sequelize");
+const router = require("./routes/api/index");
+const { environment } = require("./config");
 
-const isProduction = config.environment === "production";
+const isProduction = environment === "production";
 const app = express();
 
 app.use(morgan("dev"));
@@ -38,7 +38,7 @@ app.use(
   })
 );
 
-// app.use(routes);
+app.use(router);
 
 app.use((_req, _res, next) => {
   const err = new Error("The requested resource couldn't be found.");

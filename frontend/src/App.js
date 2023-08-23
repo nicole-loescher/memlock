@@ -7,8 +7,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import LandingPage from "./components/LandingPage/landingPage";
-import SignUpPage from "./AuthPages/signUp";
-import LogInPage from "./AuthPages/login";
+import SignUpPage from "./components/AuthPages/signUp";
+import LogInPage from "./components/AuthPages/login";
+
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>

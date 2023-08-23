@@ -36,5 +36,5 @@ export const ellieStyle = css`
   width: 200px;
   height: 200px;
   margin-bottom: 24px;
-  border: 1px solid;
+  // border: 1px solid;
 `;

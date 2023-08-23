@@ -8,7 +8,7 @@ import {
   darkGreySwoopStyle,
   lightGreySwoopStyle,
 } from "./landingPage.css";
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/logo.png";
 import Button from "../Button/button";
 
 const LandingPage = () => {
@@ -20,7 +20,7 @@ const LandingPage = () => {
       <div css={bodyStyle}>
         <img src={Logo} alt="ellieLogo" />
         <Button
-          styleType="primary"
+          styletype="primary"
           copy="Let`s Go"
           width={80}
           onClick={(e) => (window.location.href = "memlock/signup")}

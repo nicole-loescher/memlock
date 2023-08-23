@@ -2,19 +2,19 @@
 /** @jsx jsx */
 import React, { useState } from "react";
 import { jsx } from "@emotion/react";
-import Button from "../components/Button/button";
+import Button from "../Button/button";
+import KeyEllie from "../../assets/keyEllie.gif";
 import {
   backgroundStyle,
   bodyStyle,
-  disclaimer,
   ellieStyle,
   formStyle,
 } from "./authPages.css";
 import { useForm } from "react-hook-form";
-import TextInput from "../components/Inputs/TextInput/textInput";
+import TextInput from "../Inputs/TextInput/textInput";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { EMAIL_REGEX, NAME_REGEX, PASSWORD_REGEX } from "../utils/regex";
+import { EMAIL_REGEX, PASSWORD_REGEX } from "../../utils/regex";
 
 const schema = yup.object().shape({
   email: yup
@@ -23,12 +23,6 @@ const schema = yup.object().shape({
     .max(100, "Email must be less than 100 characters")
     .required("Please enter a valid email address")
     .matches(EMAIL_REGEX, "Please enter a valid email"),
-  memberName: yup
-    .string()
-    .trim()
-    .max(150)
-    .required("Please enter a name(it can also be a nickname)")
-    .matches(NAME_REGEX, "Please enter a valid name"),
   password: yup
     .string()
     .required()
@@ -38,7 +32,7 @@ const schema = yup.object().shape({
     ),
 });
 
-const SignUpPage = () => {
+const LogInPage = () => {
   const { register, handleSubmit, errors } = useForm({
     mode: "onSubmit",
     reValidateMode: "onSubmit",
@@ -52,53 +46,35 @@ const SignUpPage = () => {
   };
 
   const [email, setEmail] = useState("");
-  const [memberName, setMemberName] = useState("");
   const [password, setPassword] = useState("");
 
   return (
     <div css={backgroundStyle}>
       <div css={bodyStyle}>
-        <div css={ellieStyle}>Ellie placeholder</div>
-        <div className="header-text">Sign Up</div>
-        {/* <img src={Logo} alt="ellieLogo" /> */}
+        <img src={KeyEllie} css={ellieStyle} alt="ellieLogo" />
+        <div className="header-text">Log In</div>
         <form css={formStyle} onSubmit={handleSubmit(submitPage)}>
           <TextInput
             placeHolder="Email Address"
             id="email"
             name="email"
-            ref={register}
+            // ref={register}
             defaultValue={email}
             onChange={(e) => setEmail(e?.target?.value)}
-          />
-          <TextInput
-            placeHolder="Name"
-            name="memberName"
-            id="memberName"
-            ref={register}
-            defaultValue={memberName}
-            onChange={(e) => {
-              console.log(e, e.target, e.target.value, "-----e");
-              return setMemberName(e?.target?.value);
-            }}
           />
           <TextInput
             placeHolder="Password"
             name="password"
             id="password"
             type="password"
-            ref={register}
+            // ref={register}
             defaultValue={password}
             onChange={(e) => setPassword(e?.target?.value)}
           />
-          <div css={disclaimer}>
-            {/* TODO: link to terms and conditions and policies (build pages) */}
-            By signing up, you are agree to our <a>Terms & Conditions</a> and{" "}
-            <a>Policies</a>
-          </div>
           <Button
             copy="Continue"
             type="submit"
-            styleType="primary"
+            styletype="primary"
             width={100}
           />
         </form>
@@ -106,4 +82,4 @@ const SignUpPage = () => {
     </div>
   );
 };
-export default SignUpPage;
+export default LogInPage;

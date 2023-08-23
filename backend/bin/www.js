@@ -1,7 +1,7 @@
-import { port } from "../config";
+const { port } = require("../config/index.js");
 
-import app from "../app";
-import db from "../db/models";
+const app = require("../app.js");
+const db = require("../db/models/index.js");
 
 db.sequelize
   .authenticate()
